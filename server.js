@@ -28,7 +28,7 @@ function getMovies(req, res) {
 
     if(req.query.genre) {
         response = response.filter(movie => 
-            movie.genre.includes(req.query.genre)
+            movie.genre.toLowerCase().includes(req.query.genre.toLowerCase())
         )}
     if(req.query.country) {
         response = response.filter(movie => 
